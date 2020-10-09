@@ -1,0 +1,16 @@
+{
+"companyName": "SuhridTalukder",
+"productName": "Solar System Simulator",
+"productVersion": "0.1",
+"dataUrl": "Solar System Web simulator.data.unityweb",
+"wasmCodeUrl": "Solar System Web simulator.wasm.code.unityweb",
+"wasmFrameworkUrl": "Solar System Web simulator.wasm.framework.unityweb",
+"graphicsAPI": ["WebGL 2.0","WebGL 1.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"splashScreenStyle": "Light",
+"backgroundColor": "#FFFFFF",
+"cacheControl": {"default": "must-revalidate"},
+"developmentBuild": false,
+"multithreading": false,
+"unityVersion": "2019.4.11f1"
+}

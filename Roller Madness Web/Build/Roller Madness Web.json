@@ -1,0 +1,16 @@
+{
+"companyName": "SuhridTalukder",
+"productName": "Roller Madness",
+"productVersion": "0.1",
+"dataUrl": "Roller Madness Web.data.unityweb",
+"wasmCodeUrl": "Roller Madness Web.wasm.code.unityweb",
+"wasmFrameworkUrl": "Roller Madness Web.wasm.framework.unityweb",
+"graphicsAPI": ["WebGL 2.0","WebGL 1.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"splashScreenStyle": "Light",
+"backgroundColor": "#FFFFFF",
+"cacheControl": {"default": "must-revalidate"},
+"developmentBuild": false,
+"multithreading": false,
+"unityVersion": "2019.4.11f1"
+}
