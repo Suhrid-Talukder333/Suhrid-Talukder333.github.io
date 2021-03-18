@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+.home-img {
+    min-width: 300px;
+    min-height: 150px;
+    width: 60%;
+    height: 60%;
+    margin-top: 1rem;
+    z-index: -1;
+    animation-name: home-img;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes home-img {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+.home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: -1;
+}
+.upperText {
+    font-size: 1.3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 5rem;
+    padding: 1rem;
+    z-index: -1;
+}
+.quotes {
+    font-family: 'Cormorant Garamond', serif;
+    padding: 3rem;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.band {
+    font-family: 'Shadows Into Light', cursive;
+    display: flex;
+    position: relative;   
+    z-index: 2;
+    font-weight: bolder;
+    text-align: center;
+    font-size: 1.3rem;
+    background: rgb(69,68,140);
+    background: linear-gradient(90deg, rgba(69,68,140,0.9192051820728291) 75%, rgb(255, 255, 255) 75%);
+    color: white;
+    border-left: black;
+    border-radius: 10%;
+    animation-name: band;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+}
+
+@keyframes band {
+    0% {
+        transform: translateX(-300px);
+    }
+    100% {
+        transform: translateX(0px);
+    }
+}
+
+.hand {
+    width: 3rem;
+    height: 3rem;
+    rotate: 30deg;
+    animation: rotate 1.3s infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(40deg);
+  }
+  50% {
+    transform: rotate(-40deg);
+  }
+  100% {
+    transform: rotate(40deg);
+  }
+}
+
+.recent-job {
+    z-index: 2;
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 500;
+    text-align: center;
+    position: relative;
+    width: 17rem;
+    color: white;
+    font-size: 1.2rem;
+    padding: 1.1rem; 
+    height: 9rem;
+    background-color: rgb(59, 59, 102);
+    top: -10rem;
+    border-radius: 15%;
+    animation-name: opacity;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-duration: 3s;
+}
+
+@keyframes opacity {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.direction {
+    position: relative;
+    bottom: 9rem;
+    display: flex;
+    width: 100%;
+    height: auto;
+}
+
+
+.tag {
+    height: auto;
+    text-align: center;
+    width: auto;
+    position: relative;
+    font-weight: 500;
+    bottom: 25rem;
+    text-decoration: none;
+    color:rgb(0, 0, 0);
+    font-size: 3rem;
+    left: 4rem;
+    
+}
+
+.img-about {
+    background-color: rgb(156, 57, 40);
+    opacity: 0;
+}
+
+.img-projects {
+    background-color: rgb(81, 180, 180);
+    opacity: 0;
+}
+
+.txt {
+    width: 80%;
+    border: .5rem solid rgb(99, 13, 236);
+    opacity: 1;
+}
+
+@media (max-width: 425px) {
+    .band{
+        width: 20rem;
+        font-size: 1rem;
+    }
+    .recent-job {
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border-radius: 0;
+        font-size: 1rem;
+        height: auto;
+        width: 100%;
+    }
+    .direction {
+        flex-direction: column;
+    }
+}
+
+@media (min-width: 425px) and (max-width: 767px) {
+    .band{
+        width: 25rem;
+    }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+    .quote-padding {
+        padding-left: 7rem;
+    }
+    .band{
+       width: 25rem;
+    }
+    .quotes {
+        position: relative;
+        bottom: 8rem;
+    }
+    .recent-job {
+        font-size: 1rem;
+        height: auto;
+        width: 10rem;
+    }
+}
+@media (min-width: 1024px) {
+    .quote-padding {
+        padding-left: 7rem;
+    }
+    .quotes {
+        position: relative;
+        bottom: 8rem;
+    }
+    .band{
+       width: 30rem;
+    }
+}
