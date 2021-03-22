@@ -47,22 +47,24 @@
 }
 
 .band {
-    font-family: 'Shadows Into Light', cursive;
+    font-family: 'Noto Sans', sans-serif;
     display: flex;
     position: relative;   
     z-index: 2;
     font-weight: bolder;
     text-align: center;
-    font-size: 1.3rem;
+    font-size: 2rem;
     background: rgb(69,68,140);
-    background: linear-gradient(90deg, rgba(69,68,140,0.9192051820728291) 75%, rgb(255, 255, 255) 75%);
-    color: white;
+    background: white;
+    color: black;
     border-left: black;
     border-radius: 10%;
     animation-name: band;
     animation-duration: 3s;
     animation-fill-mode: forwards;
     animation-iteration-count: 1;
+    width: auto;
+    height: auto;
 }
 
 @keyframes band {
@@ -188,8 +190,8 @@ footer {
 }
 @media (max-width: 425px) {
     .band{
-        width: 20rem;
-        font-size: 1rem;
+        /* width: 20rem; */
+        font-size: 1.3rem;
     }
     .recent-job {
         top: 0;
@@ -224,6 +226,7 @@ footer {
 @media (min-width: 425px) and (max-width: 767px) {
     .band{
         width: 25rem;
+        font-size: 1.5rem;
     }
     .recent-job {
         top: 0;
@@ -254,6 +257,7 @@ footer {
     }
     .band{
        width: 25rem;
+       font-size: 1.5rem;
     }
     .quotes {
         position: relative;

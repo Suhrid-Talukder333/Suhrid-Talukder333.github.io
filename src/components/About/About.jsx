@@ -1,10 +1,49 @@
-
-const About = () => { 
-    return (
-        <div className="row">
-            <div className="col-md-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda minus nesciunt a similique dolorum omnis veniam! Aut error, esse quasi illum porro explicabo totam atque, dicta sed quidem voluptatum. Expedita quia omnis quos dolore, corrupti fugiat saepe quas fuga quod temporibus error repellat veniam ullam quis corporis minus sequi debitis delectus molestias dolorum nobis deserunt voluptate doloribus? Ducimus nobis numquam culpa accusamus. Eveniet numquam cupiditate doloremque nulla quasi pariatur ipsa. Nam, corporis maxime! Fugiat, earum magnam amet unde non ipsam quos natus minima, aperiam excepturi sapiente ratione, cumque at? Dignissimos minus ex fugiat illo veniam delectus qui at? Esse eveniet laborum corporis laboriosam aliquam ut explicabo pariatur ratione, numquam animi dolores neque, unde dolor magnam illum. Ratione, nulla consequuntur? Nihil voluptatum pariatur vitae tempore fugiat, consequuntur natus numquam, nulla corporis cupiditate, commodi nobis. Praesentium at totam corporis officia illo tempora, iure quo in consequatur pariatur numquam adipisci porro quaerat magni dolores delectus voluptates ut aspernatur odit? Ipsum optio fugiat, libero nobis odio est sunt dignissimos assumenda placeat ullam enim voluptates reiciendis! Ipsam dicta non maxime veritatis, neque earum veniam itaque iure nostrum rerum aperiam animi quis quo culpa quae velit autem, odio placeat aspernatur? Exercitationem, veniam. Fugit quia blanditiis suscipit ipsa iste eum voluptates? Molestias quae id blanditiis? Porro, magnam? </div>
+import about from "../../images/undraw_online_resume.svg";
+import edu_img from "../../images/undraw_Graduation.svg";
+import versity_img from "../../images/nstu.gif";
+import "./styles.css";
+const About = () => {
+  return (
+    <>
+      <div className="container-1">
+        <img className="about-img" src={about} alt="about me"></img>
+        <div className="container about-text">
+          <h2>SUHRID TALUKDER</h2>
+          <h4>SOFTWARE ENGINEER</h4>
         </div>
-    );
-}
- 
+      </div>
+      <div className="profile">
+        <p className="profile-text">
+          I am a self-learning enthusiast. I try to learn new things every now
+          and then. I am ambitious, eager to go a long way to get the job done
+          and deliver my best every day.Good communication skills, strong work
+          ethics and great team player.
+        </p>
+      </div>
+      <div className="education-container">
+        <div className="education-header">
+          <img className="edu_img" src={edu_img} alt="education header" />
+          <h4>EDUCATION</h4>
+        </div>
+        <div className="edu_content">
+          <div className="edu_versity">
+            <img className="versity_img" src={versity_img} alt="versity" />
+            <div className="edu_name">
+              <h3>Noakhali Science and Technology University</h3>
+              <h4>Computer Science and Telecommunication Engineering</h4>
+              <h5>December 2019 – January 2023</h5>
+            </div>
+          </div>
+          <div className="p-5">
+            <h5>
+              This was a great time that I spend on university. I have met lots
+              of great and good people. My coding journey started from here.
+            </h5>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+};
+
 export default About;
