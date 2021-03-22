@@ -225,6 +225,16 @@ footer {
     .band{
         width: 25rem;
     }
+    .recent-job {
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border-radius: 0;
+        font-size: 1rem;
+        height: auto;
+        width: 100%;
+    }
     .img-about{
         opacity: .7;
     }

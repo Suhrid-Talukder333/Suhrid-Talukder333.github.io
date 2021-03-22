@@ -1,44 +1,52 @@
-import {
-  Navbar,
-  Nav
-} from "react-bootstrap";
-import './styles.css'
+import { Navbar, Nav } from "react-bootstrap";
+import "./styles.css";
+import { LinkContainer } from "react-router-bootstrap";
 
 const NavBar = () => {
   return (
     <Navbar
-      className={'style'}
+      className={"style"}
       style={{ borderBottom: "3px solid blue" }}
       bg="dark"
       variant="dark"
       expand="lg"
       fixed="top"
     >
-      <Navbar.Brand href="#home">
-        <h3
-          style={{
-            color: "blue",
-            fontFamily: "'Major Mono Display', monospace",
-          }}
-        >
-          SUHRID
-        </h3>
-      </Navbar.Brand>
+      <LinkContainer to="/">
+        <Navbar.Brand href="#home">
+          <h3
+            style={{
+              color: "blue",
+              fontFamily: "'Major Mono Display', monospace",
+            }}
+          >
+            SUHRID
+          </h3>
+        </Navbar.Brand>
+      </LinkContainer>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="ml-auto">
-          <Nav.Link className="nav-margin" active href="#home">
-            Home
-          </Nav.Link>
-          <Nav.Link className="nav-margin" href="#about">
-            About
-          </Nav.Link>
-          <Nav.Link className="nav-margin" href="#link">
-            Projects
-          </Nav.Link>
-          <Nav.Link className="nav-margin" href="#link">
-            Contact
-          </Nav.Link>
+          <LinkContainer exact to="/">
+            <Nav.Link className="nav-margin" href="#home">
+              Home
+            </Nav.Link>
+          </LinkContainer>
+          <LinkContainer to="/about">
+            <Nav.Link className="nav-margin" href="#about">
+              About
+            </Nav.Link>
+          </LinkContainer>
+          <LinkContainer to="/projects">
+            <Nav.Link className="nav-margin" href="#link">
+              Projects
+            </Nav.Link>
+          </LinkContainer>
+          <LinkContainer to="/contact">
+            <Nav.Link className="nav-margin" href="#link">
+              Contact
+            </Nav.Link>
+          </LinkContainer>
           <Nav.Link
             className="nav-margin"
             href="https://www.linkedin.com/in/suhrid-talukder-580a891a5/"

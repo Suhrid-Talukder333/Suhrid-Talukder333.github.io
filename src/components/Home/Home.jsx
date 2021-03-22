@@ -14,7 +14,7 @@ function Home() {
       let b = document.getElementById("img-about");
       let c = document.getElementById('txt-about')
       c.style.backgroundColor = "#f3d652";
-      b.style.opacity = 1;
+      b.style.opacity = .7;
       b.style.transform = 'scale(1.1)'
       a.style.transform = "translateX(-20rem)";
     } else if (message === "projects") {
@@ -23,7 +23,7 @@ function Home() {
       let c = document.getElementById("txt-projects");
       c.style.backgroundColor = "#f3d652";
       b.style.transform = "scale(1.1)";
-      b.style.opacity = 1;
+      b.style.opacity = .7;
       a.style.transform = "translateX(+20rem)";
     };
   }
