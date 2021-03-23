@@ -4,18 +4,24 @@ import gif from "../../images/heart.gif";
 import hand from "../../images/hand.png";
 import about from "../../images/polarabout-me.png";
 import projects from "../../images/polar.png";
-import { Nav } from 'react-bootstrap';
-
+import { Nav } from "react-bootstrap";
+import Zoom from "react-reveal/Zoom";
+import LightSpeed from "react-reveal/LightSpeed";
+import { Link } from "react-router-dom";
+import { useLayoutEffect } from "react";
 
 function Home() {
+  useLayoutEffect(() => {
+    document.querySelector("body").scrollTo(0, 0);
+  });
   const back = (message) => {
     if (message === "about") {
       let a = document.getElementById("tag-about");
       let b = document.getElementById("img-about");
-      let c = document.getElementById('txt-about')
+      let c = document.getElementById("txt-about");
       c.style.backgroundColor = "#f3d652";
-      b.style.opacity = .7;
-      b.style.transform = 'scale(1.1)'
+      b.style.opacity = 0.7;
+      b.style.transform = "scale(1.1)";
       a.style.transform = "translateX(-20rem)";
     } else if (message === "projects") {
       let a = document.getElementById("tag-projects");
@@ -23,10 +29,10 @@ function Home() {
       let c = document.getElementById("txt-projects");
       c.style.backgroundColor = "#f3d652";
       b.style.transform = "scale(1.1)";
-      b.style.opacity = .7;
+      b.style.opacity = 0.7;
       a.style.transform = "translateX(+20rem)";
-    };
-  }
+    }
+  };
   const forward = (message) => {
     if (message === "about") {
       let a = document.getElementById("tag-about");
@@ -35,13 +41,13 @@ function Home() {
       b.style.transform = "scale(1)";
       c.style.backgroundColor = "white";
       b.style.opacity = 0;
-      a.style.transform = "translateX(0)";   
+      a.style.transform = "translateX(0)";
     } else if (message === "projects") {
       let a = document.getElementById("tag-projects");
       let b = document.getElementById("img-projects");
       let c = document.getElementById("txt-projects");
       b.style.transform = "scale(1)";
-      c.style.backgroundColor = "white"; 
+      c.style.backgroundColor = "white";
       b.style.opacity = 0;
       a.style.transform = "translateX(0)";
     }
@@ -49,19 +55,23 @@ function Home() {
   return (
     <div id="home">
       <div className="upperText">
-        <p>
-          <span style={{ fontWeight: "bold" }}>Hello There,</span> Fellow Humans
-        </p>
-        <img
-          alt="heart"
-          style={{
-            width: "2rem",
-            height: "2rem",
-            marginBottom: "1rem",
-            marginLeft: "1rem",
-          }}
-          src={gif}
-        ></img>
+        <Zoom top>
+          <p>
+            <span style={{ fontWeight: "bold" }}>Hello There,</span> Fellow
+            Humans
+          </p>
+
+          <img
+            alt="heart"
+            style={{
+              width: "2rem",
+              height: "2rem",
+              marginBottom: "1rem",
+              marginLeft: "1rem",
+            }}
+            src={gif}
+          ></img>
+        </Zoom>
       </div>
       <div className="band">
         <p style={{ margin: "auto" }}>My name is 'Suhrid Talukder'</p>
@@ -87,55 +97,64 @@ function Home() {
         </p>
       </div>
       <div className="direction">
-        <div
-          className="about"
-          onMouseEnter={() =>
-            window.screen.width >= 766 ? back("about") : 1
-          }
-          onMouseLeave={() =>
-            window.screen.width >= 766 ? forward("about") : 1
-          }
-        >
-          <a style={{ textDecoration: "none" }} href="#" alt="about">
-            <img
-              className="img-about"
-              id="img-about"
-              style={{ width: "100%", height: "100%", zIndex: "-1" }}
-              src={about}
-              alt="About"
-            />
-            <div className="tag tag-about" id="tag-about">
-              <p className="txt" id="txt-about">
-                ABOUT ME
-              </p>
-            </div>
-          </a>
-        </div>
-
-        <div
-          className="projects"
-          onMouseEnter={() =>
-            window.screen.width >= 766 ? back("projects") : 1
-          }
-          onMouseLeave={() =>
-            window.screen.width >= 766 ? forward("projects") : 1
-          }
-        >
-          <a style={{ textDecoration: "none" }} href="#" alt="projects">
-            <img
-              id="img-projects"
-              className="img-projects"
-              style={{ width: "100%", height: "100%", zIndex: "-1" }}
-              src={projects}
+        <LightSpeed left>
+          <div
+            className="about"
+            onMouseEnter={() =>
+              window.screen.width >= 766 ? back("about") : 1
+            }
+            onMouseLeave={() =>
+              window.screen.width >= 766 ? forward("about") : 1
+            }
+          >
+            <Link to="/about" style={{ textDecoration: "none" }} href="#about" alt="about">
+              <img
+                className="img-about"
+                id="img-about"
+                style={{ width: "100%", height: "100%", zIndex: "-1" }}
+                src={about}
+                alt="About"
+              />
+              <div className="tag tag-about" id="tag-about">
+                <p className="txt" id="txt-about">
+                  ABOUT ME
+                </p>
+              </div>
+            </Link>
+          </div>
+        </LightSpeed>
+        <LightSpeed right>
+          <div
+            className="projects"
+            onMouseEnter={() =>
+              window.screen.width >= 766 ? back("projects") : 1
+            }
+            onMouseLeave={() =>
+              window.screen.width >= 766 ? forward("projects") : 1
+            }
+          >
+            <Link
+              
+              to="/projects"
+              style={{ textDecoration: "none" }}
+              href="#projects"
               alt="projects"
-            />
-            <div className="tag tag-projects" id="tag-projects">
-              <p className="txt" id="txt-projects">
-                PROJECTS
-              </p>
-            </div>
-          </a>
-        </div>
+            >
+              <img
+                id="img-projects"
+                className="img-projects"
+                style={{ width: "100%", height: "100%", zIndex: "-1" }}
+                src={projects}
+                alt="projects"
+              />
+              <div className="tag tag-projects" id="tag-projects">
+                <p className="txt" id="txt-projects">
+                  PROJECTS
+                </p>
+              </div>
+            </Link>
+          </div>
+        </LightSpeed>
       </div>
       <footer>
         <a className="btn btn-secondary button" href="#home">

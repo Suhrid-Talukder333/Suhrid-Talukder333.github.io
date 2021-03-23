@@ -12,7 +12,7 @@ const NavBar = () => {
       expand="lg"
       fixed="top"
     >
-      <LinkContainer to="/">
+      <LinkContainer exact to="/">
         <Navbar.Brand href="#home">
           <h3
             style={{
@@ -32,12 +32,12 @@ const NavBar = () => {
               Home
             </Nav.Link>
           </LinkContainer>
-          <LinkContainer to="/about">
+          <LinkContainer exact to="/about">
             <Nav.Link className="nav-margin" href="#about">
               About
             </Nav.Link>
           </LinkContainer>
-          <LinkContainer to="/projects">
+          <LinkContainer exact to="/projects">
             <Nav.Link className="nav-margin" href="#link">
               Projects
             </Nav.Link>
