@@ -147,7 +147,7 @@ const About = () => {
   });
   return (
     <>
-      <div className="container-1 show-on-scroll">
+      <div className="container-1 show-on-scroll" id="about_top">
         <img className="about-img" src={about} alt="about me"></img>
         <div className="container about-text">
           <h2>SUHRID TALUKDER</h2>
@@ -282,7 +282,7 @@ const About = () => {
         </div>
       </div>
       <footer style={{marginTop:"5rem"}}>
-        <a className="btn btn-secondary button" href="#home">
+        <a className="btn btn-secondary button" href="#about_top">
           Back to Top
         </a>
         <div className="foot-links">
