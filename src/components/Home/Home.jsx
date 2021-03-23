@@ -162,7 +162,7 @@ function Home() {
         </a>
         <div className="foot-links">
           <Nav.Link
-            className="nav-margin"
+            className="margin-auto"
             href="https://www.linkedin.com/in/suhrid-talukder-580a891a5/"
           >
             <svg
@@ -177,7 +177,7 @@ function Home() {
             </svg>
           </Nav.Link>
           <Nav.Link
-            className="nav-margin"
+            className="margin-auto"
             href="https://github.com/Suhrid-Talukder333"
           >
             <svg

@@ -174,13 +174,14 @@
     opacity: 1;
 }
 .foot-links {
+    width: auto;
+    height: auto;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     margin: auto;
     padding: 1rem;
-    margin-left: 2rem;
 }
 footer {
     display: flex;
@@ -190,14 +191,16 @@ footer {
     margin: auto;
     color: white;
     text-align: center;
-    position: relative;
     height: auto;
     padding: 1rem;
     width: 100%;
+    height: auto;
     background-color: rgb(41, 37, 37);
 }
 .button {
     position: relative;
+    margin: auto;
+    padding: 1rem;
     bottom: 2rem;
 }
 @media (max-width: 425px) {

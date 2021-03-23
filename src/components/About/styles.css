@@ -123,18 +123,17 @@
 }
 .hobby_container {
     margin-top: 2rem;
-    text-align: center;
-    
+    text-align: center;    
 }
 
 .hobbies_img {
     font-family: 'Aleo', serif;
-    margin: 1rem;
-    width: 4rem;
-    height: 4rem;
+    width: auto;
+    height: auto;
     margin: auto;
     margin-top: 4rem;
     padding: 1rem;
+    text-align: center;
 }
 
 
