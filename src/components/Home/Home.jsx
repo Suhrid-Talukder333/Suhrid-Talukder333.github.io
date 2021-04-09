@@ -21,14 +21,14 @@ function Home() {
       let c = document.getElementById("txt-about");
       c.style.backgroundColor = "#f3d652";
       b.style.opacity = 0.7;
-      b.style.transform = "scale(1.1)";
+      b.style.transform = "scale(1.05)";
       a.style.transform = "translateX(-20rem)";
     } else if (message === "projects") {
       let a = document.getElementById("tag-projects");
       let b = document.getElementById("img-projects");
       let c = document.getElementById("txt-projects");
       c.style.backgroundColor = "#f3d652";
-      b.style.transform = "scale(1.1)";
+      b.style.transform = "scale(1.05)";
       b.style.opacity = 0.7;
       a.style.transform = "translateX(+20rem)";
     }
@@ -111,7 +111,7 @@ function Home() {
               <img
                 className="img-about"
                 id="img-about"
-                style={{ width: "100%", height: "100%", zIndex: "-1" }}
+                style={{ width: "100%", height: "80%", zIndex: "-1" }}
                 src={about}
                 alt="About"
               />
@@ -143,7 +143,7 @@ function Home() {
               <img
                 id="img-projects"
                 className="img-projects"
-                style={{ width: "100%", height: "100%", zIndex: "-1" }}
+                style={{ width: "100%", height: "80%", zIndex: "-1" }}
                 src={projects}
                 alt="projects"
               />
