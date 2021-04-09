@@ -1,0 +1,18 @@
+.cover{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.coverImg{
+    min-width: 300px;
+    min-height: 150px;
+    width: 50%;
+    height: 50%;
+    margin-top: 1rem;
+}
+
+.projects{
+    margin: 1rem auto;
+    text-align: center;
+}
