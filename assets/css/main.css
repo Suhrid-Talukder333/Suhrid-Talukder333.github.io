@@ -26,14 +26,14 @@
 
 /* dark theme */
 [data-theme="dark"] {
-    --navbackground: rgb(156, 154, 154);
+    --navbackground: rgb(37, 36, 36);
     --primary-font-color: #ccc9c9;
     --primary-background-color: rgb(73, 72, 72);
-    --link-color: #f24a20;
+    --link-color: #78a7ee;
     --secondary-background-color: #797676;
     --secondary-font-color: rgb(247, 247, 247);
     --hover: rgb(255, 255, 255);
-    --highlight-color: rgb(202, 198, 198);
+    --highlight-color: rgb(114, 111, 111);
     --border: rgb(192, 191, 191);
 }
 
@@ -57,6 +57,7 @@ body {
     box-sizing: border-box;
     -ms-overflow-style: none;
     scrollbar-width: none;
+    color: var(--secondary-font-color);
 }
 
 
@@ -72,6 +73,7 @@ body {
     border-radius: 10px;
     padding: 10px;
     background-color: var(--highlight-color);
+    color: var(--secondary-font-color);
 }
 
 .button {
@@ -126,7 +128,7 @@ body {
     font-family: var(--secondary-font);
     position: fixed;
     top: 5%;
-    width: 70%;
+    width: 100%;
     height: 100px;
     display: flex;
     align-items: center;
@@ -135,7 +137,6 @@ body {
     transform: translate(-50%, -50%);
     z-index: 5;
     padding: 10px;
-    border-radius: 25px;
     background-color: var(--navbackground);
     box-shadow: 0px 10px 20px -5px rgb(0 0 0 / 50%);
 }
@@ -147,6 +148,7 @@ body {
     font-size: 34px;
     font-weight: 900;
     text-transform: uppercase;
+    left: 100px;
 }
 
 .logo a {
@@ -186,11 +188,16 @@ body {
 .resume {
     cursor: pointer;
     position: relative;
+    margin-right: 30px;
 }
 
 @media screen and (max-width:768px) {
     .navbar {
         width: 100%;
+    }
+
+    .logo {
+        left: 0;
     }
 
     .navlist {
@@ -202,6 +209,7 @@ body {
         top: 75%;
         left: 50%;
         transform: translate(-50%, -50%);
+        margin-right: 0;
     }
 
     .logo {
@@ -226,7 +234,7 @@ body {
 .bar3 {
     width: 35px;
     height: 5px;
-    background-color: #333;
+    background-color: var(--secondary-font-color);
     margin: 6px 0;
     transition: 0.4s;
 }
@@ -411,7 +419,92 @@ body {
 }
 
 /* Mobile Nav END*/
+/* Theme change button */
+.theme-switch-wrapper {
+    position: fixed;
+    display: flex;
+    z-index: 5;
+    align-items: center;
+    position: fixed;
+    right: 200px;
+    top: 40px;
+}
 
+.theme-switch-wrapper span {
+    margin-right: 10px;
+    font-size: 1rem;
+}
+
+.theme-switch {
+    display: inline-block;
+    height: 34px;
+    position: relative;
+    width: 60px;
+}
+
+.theme-switch input {
+    display: none;
+}
+
+.slider {
+    background: #ccc;
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: 0.4s;
+    border: 1px solid rgb(199, 196, 196);
+}
+
+.slider::before {
+    background: #fff;
+    bottom: 4px;
+    content: "";
+    height: 26px;
+    left: 4px;
+    position: absolute;
+    transition: 0.4s;
+    width: 26px;
+}
+
+input:checked+.slider {
+    background: var(--primary-color);
+}
+
+input:checked+.slider::before {
+    transform: translateX(26px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round::before {
+    border-radius: 50%;
+}
+
+.fas {
+    font-size: 30px;
+    margin-right: 5px;
+}
+
+@media screen and (max-width:768px) {
+    .theme-switch-wrapper {
+        right: 100px;
+        top: 40px;
+    }
+}
+
+@media screen and (min-width:769px) and (max-width:1140px) {
+    .theme-switch-wrapper {
+        right: 45%;
+        top: 80px;
+    }
+}
+
+/* Theme change button end */
 /* INTRO */
 .introduction {
     position: relative;
@@ -420,6 +513,7 @@ body {
     height: 100vh;
     align-items: center;
     justify-content: center;
+    background-color: var(--primary-background-color);
 }
 
 .introduction::before {
@@ -640,8 +734,12 @@ body {
     font-size: 11px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
+}
+
+.project-tools>h3 {
+    padding: 0px 10px;
 }
 
 @media screen and (max-width:768px) {
@@ -711,8 +809,12 @@ body {
     font-size: 11px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
+}
+
+.fun-tools>h3 {
+    padding: 0px 10px;
 }
 
 @media screen and (max-width:768px) {

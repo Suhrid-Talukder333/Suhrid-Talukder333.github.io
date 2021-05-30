@@ -65,3 +65,39 @@ nav3.addEventListener("click", toggleNav);
 nav4.addEventListener("click", toggleNav);
 nav5.addEventListener("click", toggleNav);
 // mobile nav end//
+
+// Theme Changer
+const toggleSwitch = document.querySelector('input[type="checkbox"]');
+const toggleIcon = document.getElementById("toggle-icon");
+
+const darkMode = () => {
+  toggleIcon.children[0].classList.remove("fa-sun");
+  toggleIcon.children[0].classList.add("fa-moon");
+};
+
+const lightMode = () => {
+  toggleIcon.children[0].classList.remove("fa-moon");
+  toggleIcon.children[0].classList.add("fa-sun");
+};
+
+const switchTheme = (event) => {
+  if (event.target.checked) {
+    document.documentElement.setAttribute("data-theme", "dark");
+    localStorage.setItem("theme", "dark");
+    darkMode();
+  } else {
+    document.documentElement.setAttribute("data-theme", "light");
+    localStorage.setItem("theme", "light");
+    lightMode();
+  }
+};
+
+toggleSwitch.addEventListener("change", switchTheme);
+const currentTheme = localStorage.getItem("theme");
+if (currentTheme) {
+  document.documentElement.setAttribute("data-theme", currentTheme);
+  if (currentTheme === "dark") {
+    darkMode();
+    toggleSwitch.checked = true;
+  }
+}
