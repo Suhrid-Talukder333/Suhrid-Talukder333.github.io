@@ -30,7 +30,7 @@
     --primary-font-color: #ccc9c9;
     --primary-background-color: rgb(73, 72, 72);
     --link-color: #78a7ee;
-    --secondary-background-color: #797676;
+    --secondary-background-color: #525252;
     --secondary-font-color: rgb(247, 247, 247);
     --hover: rgb(255, 255, 255);
     --highlight-color: rgb(114, 111, 111);
@@ -82,16 +82,24 @@ body {
     color: var(--link-color);
     font-weight: 700;
     text-decoration: none;
-    background-color: transparent;
-    border-radius: 25px;
     cursor: pointer;
     transition: .2s all ease-in-out;
-    border: 2px solid var(--primary-font-color);
+    border: none;
+    border-radius: 10px;
+    color: white;
+    background-color: rgb(109, 158, 138);
+    outline: none;
+
+    box-shadow: 0 2px 2px 2px rgb(122, 118, 118);
 }
 
 .button:hover {
     background-color: var(--hover);
     color: var(--secondary-background-color);
+}
+
+button:active {
+    transform: translate(0, 1.5px);
 }
 
 ::-webkit-scrollbar {
@@ -896,6 +904,12 @@ input:checked+.slider::before {
 .contact__form input[type="submit"] {
     margin: auto;
     padding: 10px 50px;
+    cursor: pointer;
+}
+
+.contact__form input[type="submit"]:hover {
+    background-color: var(--hover);
+    color: var(--secondary-background-color);
 }
 
 
