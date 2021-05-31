@@ -117,7 +117,7 @@ const api_connect = async (name, email, text) => {
     }),
   });
   const dataJson = await data.json();
-  return dataJson.check;
+  return dataJson.value.check;
 };
 
 const submitEmail = (event) => {
@@ -127,7 +127,7 @@ const submitEmail = (event) => {
   const text = event.srcElement[2].value;
   check = api_connect(name, email, text);
   console.log(check);
-  if (check) {
+  if (check == true) {
     contact_wrapper.innerHTML = `<h1>Thank You ${name}!! 😁 You will receive an automated email. Be sure to check your spam if you can't find the mail. I will get in touch as soon as I can!!</h1>`;
   } else {
     contact_wrapper.innerHTML = `<h1>OPPSS!! There was an error. Please refresh and try again. Thank You.</h1>`;
