@@ -107,7 +107,7 @@ const submit = document.getElementById("submitForm");
 const contact_wrapper = document.getElementById("contact_wrapper");
 
 const api_connect = async (name, email, text) => {
-  const data = await fetch("http://localhost:3001/", {
+  const data = await fetch("https://cryptic-citadel-76748.herokuapp.com/", {
     method: "post",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
@@ -116,6 +116,8 @@ const api_connect = async (name, email, text) => {
       person_text: text,
     }),
   });
+  const dataJson = await data.json();
+  return dataJson.check;
 };
 
 const submitEmail = (event) => {
@@ -124,12 +126,12 @@ const submitEmail = (event) => {
   const email = event.srcElement[1].value;
   const text = event.srcElement[2].value;
   check = api_connect(name, email, text);
-  // console.log(JSON.parse(check));
-  // if (check) {
-  //   contact_wrapper.innerHTML = `<h1>Thank You ${name}!! 😁 You will receive an automated email. Be sure to check your spam if you can't find the mail. I will get in touch as soon as I can!!</h1>`;
-  // } else {
-  //   contact_wrapper.innerHTML = `<h1>OPPSS!! There was an error. Please refresh and try again. Thank You.</h1>`;
-  // }
+  console.log(check);
+  if (check) {
+    contact_wrapper.innerHTML = `<h1>Thank You ${name}!! 😁 You will receive an automated email. Be sure to check your spam if you can't find the mail. I will get in touch as soon as I can!!</h1>`;
+  } else {
+    contact_wrapper.innerHTML = `<h1>OPPSS!! There was an error. Please refresh and try again. Thank You.</h1>`;
+  }
 };
 
 submit.addEventListener("submit", submitEmail);
