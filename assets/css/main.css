@@ -614,7 +614,7 @@ input:checked+.slider::before {
 .name {
     display: inline-block;
     font-size: 2.5rem;
-    color: #073f94;
+    color: #67a4ff;
 }
 
 .current-job {
