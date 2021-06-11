@@ -70,8 +70,8 @@ body {
 }
 
 .highlight {
-    border-radius: 10px;
-    padding: 10px;
+    border-radius: 15px;
+    padding: 5px;
     background-color: var(--highlight-color);
     color: var(--secondary-font-color);
 }
@@ -637,7 +637,7 @@ input:checked+.slider::before {
 
 @media screen and (max-width:768px) {
     .about-text {
-        font-size: 1rem;
+        font-size: 12px;
     }
 
     .about-heading {
@@ -650,6 +650,10 @@ input:checked+.slider::before {
 
     .current-job {
         font-size: 1.5rem;
+    }
+
+    .quotes {
+        display: none;
     }
 }
 
