@@ -655,6 +655,10 @@ input:checked+.slider::before {
     .quotes {
         display: none;
     }
+
+    .name {
+        font-size: 1.4rem;
+    }
 }
 
 /* about end */
