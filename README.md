@@ -1,7 +1,4 @@
 <h1>Portfolio</h1>
-<div>
-  <img src="https://i.ibb.co/JtJ7gz7/website.png" />
-</div>
 </br></br>
 <p>My portfolio website that I built. Feel free to use it and customize it to make your own portfolio 😁</p>
 
