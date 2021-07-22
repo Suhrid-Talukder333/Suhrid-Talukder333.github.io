@@ -10,16 +10,16 @@ const body = document.querySelector("body");
 const loading = document.getElementById("loading-container");
 // Loading //
 
-document.addEventListener("DOMContentLoaded", () => {
-  console.log("hello");
-  html.classList.toggle("scroll-lock");
-  body.classList.toggle("scroll-lock");
-  setTimeout(() => {
-    loading.style.display = "none";
-    html.classList.toggle("scroll-lock");
-    body.classList.toggle("scroll-lock");
-  }, 1000);
-});
+// document.addEventListener("DOMContentLoaded", () => {
+//   console.log("hello");
+//   html.classList.toggle("scroll-lock");
+//   body.classList.toggle("scroll-lock");
+//   setTimeout(() => {
+//     loading.style.display = "none";
+//     html.classList.toggle("scroll-lock");
+//     body.classList.toggle("scroll-lock");
+//   }, 1000);
+// });
 // Loading END //
 
 // mobile menu //
