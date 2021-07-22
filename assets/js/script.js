@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
     loading.style.display = "none";
     html.classList.toggle("scroll-lock");
     body.classList.toggle("scroll-lock");
-  }, 3000);
+  }, 1000);
 });
 // Loading END //
 
